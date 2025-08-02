@@ -2,6 +2,7 @@ return {
 	'echasnovski/mini.nvim',
 	version = false,
 	config = function()
+		require("mini.ai").setup()
 		require("mini.pairs").setup()
 		require("mini.comment").setup()
 		require('mini.completion').setup()
@@ -9,5 +10,6 @@ return {
 		require('mini.surround').setup()
 		require('mini.bracketed').setup()
 		require('mini.jump2d').setup()
+		require('mini.extra').setup()
 	end,
 }
