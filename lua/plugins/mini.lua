@@ -8,6 +8,5 @@ return {
 		require('mini.move').setup()
 		require('mini.surround').setup()
 		require('mini.bracketed').setup()
-		require('mini.files').setup()
 	end,
 }
