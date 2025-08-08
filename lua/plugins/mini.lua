@@ -15,5 +15,6 @@ return {
 		require('mini.icons').setup()
 		require('mini.statusline').setup()
 		require('mini.starter').setup()
+		require('mini.cursorword').setup({delay = 0})
 	end,
 }
