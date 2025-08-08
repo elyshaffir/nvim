@@ -12,7 +12,6 @@ return {
 		require('mini.jump2d').setup()
 		require('mini.extra').setup()
 		require('mini.misc').setup()
-		require('mini.pick').setup()
 		require('mini.icons').setup()
 		require('mini.statusline').setup()
 		require('mini.starter').setup()
