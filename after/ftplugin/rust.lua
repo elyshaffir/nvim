@@ -17,10 +17,11 @@ vim.keymap.set(
   { silent = true, buffer = bufnr }
 )
 
-vim.api.nvim_create_autocmd("ModeChanged", {
-	callback = function()
-		if vim.bo.ft == "rust" then
-			vim.cmd.RustFmt()
-		end
-	end,
-})
+vim.keymap.set(
+  "n", 
+  "<leader>e", 
+  function()
+	vim.cmd.RustFmt()
+  end,
+  { silent = true, buffer = bufnr }
+)
