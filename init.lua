@@ -1,5 +1,6 @@
 require("config.lazy")
 require("config.mini_clue")
+require("toggleterm").setup()
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
@@ -24,3 +25,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 MiniMisc.setup_auto_root()
 MiniMisc.setup_restore_cursor()
 
+function _G.set_terminal_keymaps()
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
