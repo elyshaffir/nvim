@@ -10,7 +10,6 @@ return {
 		require('mini.surround').setup()
 		require('mini.bracketed').setup()
 		require('mini.jump2d').setup()
-		require('mini.extra').setup()
 		require('mini.misc').setup()
 		require('mini.icons').setup()
 		require('mini.statusline').setup()

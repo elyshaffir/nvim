@@ -10,10 +10,6 @@ vim.lsp.inlay_hint.enable()
 vim.diagnostic.config({ virtual_text = true })
 vim.g.rustfmt_fail_silently = 1
 
-vim.keymap.set("n", "-", function()
-	MiniExtra.pickers.explorer()
-end)
-
 vim.api.nvim_create_user_command("Reload", "source $MYVIMRC", {})
 
 local builtin = require('telescope.builtin')
@@ -32,3 +28,6 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
+
+vim.keymap.set('n', '<leader>e', Snacks.explorer.reveal, { desc = 'Open explorer' })
