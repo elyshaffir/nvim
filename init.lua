@@ -30,4 +30,4 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 
-vim.keymap.set('n', '<leader>e', function() Snacks.explorer.reveal({ buf=0 }) end, { desc = 'Open explorer' })
+vim.keymap.set('n', '<leader>e', [[<cmd>NvimTreeFindFile<CR><cmd>NvimTreeFocus<CR>]], { desc = 'Open explorer' })
